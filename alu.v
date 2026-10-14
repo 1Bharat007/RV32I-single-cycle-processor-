@@ -1,3 +1,13 @@
+// ============================================================
+// alu.v  –  Arithmetic Logic Unit
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Implements all RV32I ALU operations:
+//               ADD, SUB, SLL, SLT, SLTU, XOR,
+//               SRL, SRA, OR, AND, and PASS_B (for LUI).
+//               Produces a 32-bit result and a zero flag.
+// ============================================================
+`timescale 1ns / 1ps
+
 module alu(
     input [31:0] operand_a,
     input [31:0] operand_b,
