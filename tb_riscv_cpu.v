@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 // tb_riscv_cpu.v  -  Testbench for RV32I Single-Cycle CPU
 // RV32I Single-Cycle Processor  |  COA Assignment
 // Description : Drives clock and reset, loads a small test
@@ -49,7 +49,7 @@ module tb_riscv_cpu;
     //  20: or   x6, x1, x2     -> x6 = 15 (5 | 10)
     //  24: xor  x7, x1, x2     -> x7 = 15 (5 ^ 10)
     //  28: slt  x8, x1, x2     -> x8 = 1  (5 < 10)
-    //  32: beq  x1, x1, +8     -> branch taken -> jumps to 44
+    //  32: beq  x1, x1, +12    -> branch taken -> jumps to 44
     //  36: addi x9, x0, 99     -> should be skipped
     //  40: addi x9, x0, 99     -> should be skipped
     //  44: addi x10, x0, 42    -> x10 = 42  (branch lands here)
@@ -64,8 +64,8 @@ module tb_riscv_cpu;
         uut.instruction_mem.memory[1]  = 32'h00A00113;
         // add  x3, x1, x2     -- 0x002081B3
         uut.instruction_mem.memory[2]  = 32'h002081B3;
-        // sub  x4, x2, x1     -- 0x40208233
-        uut.instruction_mem.memory[3]  = 32'h40208233;
+        // sub  x4, x2, x1     -- 0x40110233
+        uut.instruction_mem.memory[3]  = 32'h40110233;
         // and  x5, x1, x2     -- 0x0020F2B3
         uut.instruction_mem.memory[4]  = 32'h0020F2B3;
         // or   x6, x1, x2     -- 0x0020E333
@@ -74,8 +74,8 @@ module tb_riscv_cpu;
         uut.instruction_mem.memory[6]  = 32'h0020C3B3;
         // slt  x8, x1, x2     -- 0x0020A433
         uut.instruction_mem.memory[7]  = 32'h0020A433;
-        // beq  x1, x1, +8     -- 0x00108463
-        uut.instruction_mem.memory[8]  = 32'h00108463;
+        // beq  x1, x1, +12    -- 0x00108663
+        uut.instruction_mem.memory[8]  = 32'h00108663;
         // addi x9, x0, 99  (skipped)  -- 0x06300493
         uut.instruction_mem.memory[9]  = 32'h06300493;
         // addi x9, x0, 99  (skipped)  -- 0x06300493
