@@ -1,3 +1,13 @@
+// ============================================================
+// data_memory.v  –  Data Memory (RAM)
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : 1024-byte little-endian byte-addressable RAM.
+//               Supports LB, LH, LW, LBU, LHU (reads) and
+//               SB, SH, SW (synchronous writes).
+//               Read is combinational; write is clocked.
+// ============================================================
+`timescale 1ns / 1ps
+
 module data_memory(
     input clk,
     input reset,
