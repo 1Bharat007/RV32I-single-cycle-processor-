@@ -1,3 +1,18 @@
+// ============================================================
+// control_unit.v  –  Main Control Unit
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Decodes the 7-bit opcode (and funct3 for
+//               loads/stores/branches) to generate all
+//               datapath control signals: reg_write, alu_src,
+//               alu_a_src, mem_read/write, branch/jump/jalr,
+//               writeback_sel, imm_type, alu_op,
+//               mem_control, branch_type.
+// Supported instructions:
+//   R-type, I-type arith, Loads, Stores, Branches,
+//   JAL, JALR, LUI, AUIPC
+// ============================================================
+`timescale 1ns / 1ps
+
 module control_unit(
     input [6:0] opcode,
     input [2:0] funct3,
