@@ -1,3 +1,13 @@
+// ============================================================
+// alu_control.v  –  ALU Control Unit
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Decodes the ALU operation code (from the
+//               main control unit) together with funct3 and
+//               funct7 to produce the 4-bit ALU control
+//               signal used by alu.v.
+// ============================================================
+`timescale 1ns / 1ps
+
 module alu_control(
     input [2:0] alu_op,
     input [2:0] funct3,
