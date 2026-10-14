@@ -1,3 +1,14 @@
+// ============================================================
+// next_pc.v  –  Next Program Counter Logic
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Selects the next PC value among:
+//               PC+4  (sequential),
+//               PC + branch_imm  (taken branch),
+//               PC + jump_imm    (JAL),
+//               rs1 + jalr_imm   (JALR, LSB cleared).
+// ============================================================
+`timescale 1ns / 1ps
+
 module next_pc(
     input [31:0] pc,
 
