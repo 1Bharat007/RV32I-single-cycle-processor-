@@ -1,3 +1,13 @@
+// ============================================================
+// branch_unit.v  –  Branch Condition Evaluator
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Evaluates all six RV32I branch conditions
+//               (BEQ, BNE, BLT, BGE, BLTU, BGEU) and
+//               asserts branch_taken when the condition
+//               is satisfied and branch is enabled.
+// ============================================================
+`timescale 1ns / 1ps
+
 module branch_unit(
     input branch,
     input [2:0] branch_type,
