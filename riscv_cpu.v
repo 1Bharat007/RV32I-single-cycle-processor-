@@ -179,6 +179,7 @@ module riscv_cpu(
     wire [31:0] alu_operand_b;
 
     wire [31:0] alu_result;
+    wire [31:0] memory_read_data;
 
 
     // PC + 4
@@ -227,8 +228,6 @@ module riscv_cpu(
     // =========================================================
     // Data Memory
     // =========================================================
-
-    wire [31:0] memory_read_data;
 
     data_memory data_mem (
         .clk(clk),
