@@ -1,3 +1,12 @@
+// ============================================================
+// register_file.v  –  32 x 32-bit Register File
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Dual read-port, single write-port register
+//               file.  x0 is hardwired to 0.
+//               Synchronous write, asynchronous read.
+// ============================================================
+`timescale 1ns / 1ps
+
 module register_file(
     input clk,
     input reset,
