@@ -1,3 +1,12 @@
+// ============================================================
+// immediate_generator.v  –  Immediate Value Generator
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Sign-extends / zero-extends the immediate
+//               field of an instruction according to its
+//               encoding type: I, Shift-I, S, B, U, J.
+// ============================================================
+`timescale 1ns / 1ps
+
 module immediate_generator(
     input [31:0] instruction,
     input [2:0] imm_type,
