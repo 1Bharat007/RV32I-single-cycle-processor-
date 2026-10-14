@@ -1,0 +1,16 @@
+﻿# Simulation artifacts
+*.vvp
+*.vcd
+*.out
+
+# Compiled output
+*.o
+*.a
+
+# GTKWave save files
+*.gtkw
+*.sav
+
+# Windows stuff
+Thumbs.db
+Desktop.ini
