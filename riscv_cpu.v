@@ -1,3 +1,17 @@
+// ============================================================
+// riscv_cpu.v  –  RV32I Single-Cycle Processor  (Top Level)
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Instantiates and connects all datapath and
+//               control modules:
+//               pc, instruction_memory, control_unit,
+//               register_file, immediate_generator,
+//               alu_control, muxes, alu, data_memory,
+//               branch_unit, next_pc.
+// Implements the full RV32I base integer ISA in a single
+// clock cycle (no pipeline).
+// ============================================================
+`timescale 1ns / 1ps
+
 module riscv_cpu(
     input clk,
     input reset,
