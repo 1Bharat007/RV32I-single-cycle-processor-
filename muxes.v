@@ -1,3 +1,13 @@
+// ============================================================
+// muxes.v  –  Datapath Multiplexers
+// RV32I Single-Cycle Processor  |  COA Assignment
+// Description : Houses the three datapath MUXes:
+//               ALU-A MUX  : rs1  / PC
+//               ALU-B MUX  : rs2  / immediate
+//               Writeback  : ALU result / mem data / PC+4
+// ============================================================
+`timescale 1ns / 1ps
+
 module muxes(
     // Inputs for ALU A MUX
     input [31:0] rs1_value,
